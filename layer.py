@@ -7,4 +7,11 @@ def Conv2D(filters, kernel_size, strides=[1, 1], padding='same', activation=None
                          strides=strides,
                          padding=padding,
                          activation=activation,
-                         kernel_regularizer=)
+                         kernel_regularizer=tf.keras.regularizers.l2(0.001),
+                         )
+
+def Dense(units, activation=None):
+    return layers.Dense(units=units,
+                        actiavtion=activation,
+                        kernel_regularizer=tf.keras.regularizers.l2(0.001),
+                        )
